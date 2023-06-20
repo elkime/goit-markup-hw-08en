@@ -1,0 +1,4 @@
+.studio {
+  @extend .logo;
+  color: getColor(primary);
+}

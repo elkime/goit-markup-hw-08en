@@ -1,0 +1,20 @@
+.section {
+  @include flex(column, center, center);
+  &__title {
+    color: getColor(accent);
+    font-size: 36px;
+    line-height: 1.17;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &--top {
+    padding-top: 94px;
+  }
+  &--bottom {
+    padding-bottom: 94px;
+  }
+  &--color {
+    background-color: getColor(tertiary);
+  }
+}

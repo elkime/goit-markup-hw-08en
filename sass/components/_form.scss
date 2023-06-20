@@ -1,0 +1,119 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 38.5px 39px 41.5px 41px;
+  align-items: center;
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: rgba(33, 33, 33, 1);
+    margin-bottom: 12px;
+  }
+  &__icon {
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    z-index: 101;
+  }
+  &__textarea {
+    font-family: inherit;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    border: #21212120 solid 1px;
+    border-radius: 4px;
+    margin-top: 4px;
+    position: relative;
+    resize: none;
+    outline: none;
+    color: black;
+    padding-left: 12px;
+  }
+  &__check {
+    display: flex;
+    padding-left: 13px;
+    padding-right: 12px;
+    margin-top: 16px;
+    line-height: 1.71em;
+    color: getColor(text);
+  }
+  &__button {
+    @extend .button;
+    margin-top: 4px;
+    padding: 10px 75px;
+    line-height: 1.875em;
+  }
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+  color: getColor(text);
+  &:focus-within {
+    border-color: getColor(selected);
+    fill: getColor(selected);
+  }
+}
+
+.form__input {
+  padding-left: 35px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  border: #21212120 solid 1px;
+  border-radius: 4px;
+  margin-top: 4px;
+  position: relative;
+  resize: none;
+  outline: none;
+  color: black;
+  &:focus-within {
+    border-color: getColor(selected);
+    fill: getColor(selected);
+  }
+}
+
+.form__custom-checkbox {
+  display: flex;
+  position: relative;
+  outline: none;
+  width: 20px;
+  height: 16px;
+  margin-right: 12px;
+  margin-top: 3px;
+  &::after {
+    content: '';
+    height: 16px;
+    width: 16px;
+    background-image: url(../images/chekoff.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &:checked::after {
+    background-image: url(../images/checkon.svg);
+  }
+}
+
+.form__close {
+  border-radius: 50%;
+  border: getColor(icons) solid 1px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  position: absolute;
+  justify-content: center;
+  right: 8px;
+  top: 8px;
+
+  &:hover,
+  &:focus {
+    fill: getColor(selected);
+  }
+}

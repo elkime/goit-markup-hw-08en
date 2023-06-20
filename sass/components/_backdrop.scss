@@ -1,0 +1,65 @@
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes open-modal {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+
+  &__modal {
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    animation-duration: 1500ms;
+    animation-name: open-modal;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
+      0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+  }
+}
+
+@include screen-480{
+  .backdrop{
+      .modal{
+          height: 620px;
+          margin: 0 15px;
+          .form{
+              width: 100%;
+              &__title{
+                  text-align: center;
+                  width: 100%;
+              }
+              &__label{
+                  .form__input{
+                      width: 100%;
+                  }
+              }
+              &__text{
+                  width: 100%;
+                  margin: 20px 0 31px 0;
+              }
+          }
+      } 
+  }
+}

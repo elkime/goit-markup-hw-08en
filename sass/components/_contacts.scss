@@ -1,0 +1,11 @@
+.contacts {
+  padding-top: 5px;
+  @include flex(row, center, baseline);
+  &__item {
+    @extend .nav__item;
+  }
+  &__link {
+    @extend .nav__link;
+    color: getColor(text);
+  }
+}

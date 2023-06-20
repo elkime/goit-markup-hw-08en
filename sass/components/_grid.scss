@@ -1,0 +1,7 @@
+.grid {
+  @extend .list;
+  flex-wrap: wrap;
+  justify-content: space-center;
+  margin-top: 34px;
+  gap: 30px 27px;
+}

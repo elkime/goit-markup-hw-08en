@@ -1,0 +1,26 @@
+.banner {
+  background-image: url(../images/fondo.png);
+  width: 100%;
+  border: none;
+  padding: 200px 0 188px 0;
+  position: relative;
+  &__title {
+    color: getColor(secondary);
+    font-size: 44px;
+    line-height: 1.36em;
+    letter-spacing: 0.06em;
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  &__bgcolor {
+    background-color: rgba(47, 48, 58, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+  }
+}
+

@@ -1,0 +1,19 @@
+$colors: (
+  'primary': #2f303a,
+  'accent': #000,
+  'secondary': #fff,
+  'foreground': #191919,
+  'backgrounds': #2f303a,
+  'selected': #2196f3,
+  'btn-hover': #188ce8,
+  'text': #757575,
+  'icons': #afb1b8,
+  'footer-text': #ffffff10,
+  'tertiary': #f5f4fa,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+$radius: 4px;
